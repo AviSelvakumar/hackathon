@@ -1,65 +1,97 @@
-import Image from "next/image";
+/**
+ * TODO:
+ * - Fill out learn more
+ * - Add sponsors section
+ * - Add FAQ to learn more section
+ * - Add footer section w/ social media links & contact info
+ * - Implement email list
+ * - Improve landing page; too plain!
+ *  - Different colors for each section?
+ */
+
+"use client";
+
+import { useEffect, useState } from 'react';
+import { Button, Flex, Typography, ConfigProvider, Input, Form} from 'antd';
+import useIllustrationTheme from './illustration_theme';
+const { Title, Text} = Typography;
+const CONTACT_EMAIL = 'sponsors@hackathonname.com';
 
 export default function Home() {
+  const configProps = useIllustrationTheme();
+
+  const sections = ['landing', 'learn-more', 'register', 'sponsors', 'footer'];
+
+  const keypressHandler = (event: KeyboardEvent) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      const currentSection = sections.findIndex(section => document.getElementById(section)?.getBoundingClientRect().top === 0);
+      const nextSection = (currentSection + 1) % sections.length;
+      document.getElementById(sections[nextSection])?.scrollIntoView({ behavior: 'smooth' });
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      const currentSection = sections.findIndex(section => document.getElementById(section)?.getBoundingClientRect().top === 0);
+      const previousSection = (currentSection - 1 + sections.length) % sections.length;
+      document.getElementById(sections[previousSection])?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', keypressHandler);
+    return () => {
+      window.removeEventListener('keydown', keypressHandler);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <ConfigProvider {...configProps}>
+      <div className="app-container" id = "app-container">
+        {/*Section 1 - Landing*/}
+        <Flex vertical gap={16} align="center" justify="center" className='section landing' id = 'landing'>
+          <Title level={1} style={{ marginBottom: 0 }} className='section-content'>Hackathon Name</Title>
+          <Text className='section-content'>A one-month online hackathon for high school students.</Text>
+          <Flex gap={16}>
+            <Button type="primary" href='#register'>RSVP</Button>
+            <Button type="default" href='#learn-more'>Learn More</Button>
+          </Flex>
+          <div className='scroll-down-arrow' aria-hidden>
+            <Text className='scroll-down-text'>Scroll for timeline, prizes, & more!</Text>
+            <img src="/arrow-down.svg" alt="Scroll Down" />
+          </div>
+        </Flex>
+        {/*Section 2 - Learn More*/}
+        <div className="wave-container-learn-more"></div>
+        <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='learn-more' className='section learn-more'>
+          <Title level={2} style={{ marginBottom: 0 }} className='section-content'>Learn More</Title>
+          <Text className='section-content'>Here is some information about the hackathon.</Text>
+        </Flex>
+        {/*Section 3 - Register*/}
+        <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='register' className='section register'>
+          <Title level={2} style={{ marginBottom: 0 }} className='section-content'>Interested?</Title>
+          <Text className='section-content'>Enter your email to get updates about the hackathon.</Text>
+            <Form noValidate>
+              <Flex gap={16}>
+                <Form.Item name="email" rules={[{ required: true, message: 'Please input your email!' }, { type: 'email', message: 'Please enter a valid email!' }]}>
+                  <Input placeholder="Enter your email" style={{ width: 300 }} type="email"/>
+                </Form.Item>
+                <Button type="primary">Submit</Button>
+              </Flex>
+            </Form>
+        </Flex>
+        {/*Section 4 - Sponsors*/}
+        <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='sponsors' className='section sponsors'>
+          <Title level={2} style={{ marginBottom: 0 }} className='section-content'>Sponsors</Title>
+          <Text className='section-content'>Interested in sponsoring Hackathon Name? Contact us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>!</Text>
+        </Flex>
+        {/*Section 5 - Footer*/}
+        <div className="wave-container"></div>
+        <Flex vertical gap={16} align="right" justify="top" id='footer' className='footer'>
+          <Title level={2} className='footer-title' style={{ fontWeight: 900, color: '#2C2C2C', marginBottom: 0 }}>
+            Hackathon Name
+          </Title>
+          <Text className='footer-text' style={{ color: '#2C2C2C' }}>Socials, Contact Info, etc.</Text>
+        </Flex>
+      </div>
+    </ConfigProvider>
   );
 }
