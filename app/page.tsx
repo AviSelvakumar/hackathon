@@ -15,33 +15,11 @@ import { useEffect, useState } from 'react';
 import { Button, Flex, Typography, ConfigProvider, Input, Form} from 'antd';
 import useIllustrationTheme from './illustration_theme';
 const { Title, Text} = Typography;
-const CONTACT_EMAIL = 'sponsors@hackathonname.com';
+const CONTACT_EMAIL = 'sponsors@hackathon.com';
 
 export default function Home() {
   const configProps = useIllustrationTheme();
 
-  const sections = ['landing', 'learn-more', 'register', 'sponsors', 'footer'];
-
-  const keypressHandler = (event: KeyboardEvent) => {
-    if (event.key === 'ArrowDown') {
-      event.preventDefault();
-      const currentSection = sections.findIndex(section => document.getElementById(section)?.getBoundingClientRect().top === 0);
-      const nextSection = (currentSection + 1) % sections.length;
-      document.getElementById(sections[nextSection])?.scrollIntoView({ behavior: 'smooth' });
-    } else if (event.key === 'ArrowUp') {
-      event.preventDefault();
-      const currentSection = sections.findIndex(section => document.getElementById(section)?.getBoundingClientRect().top === 0);
-      const previousSection = (currentSection - 1 + sections.length) % sections.length;
-      document.getElementById(sections[previousSection])?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('keydown', keypressHandler);
-    return () => {
-      window.removeEventListener('keydown', keypressHandler);
-    };
-  }, []);
 
   return (
     <ConfigProvider {...configProps}>
@@ -67,6 +45,11 @@ export default function Home() {
         </Flex>
         {/*Section 3 - Register*/}
         <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='register' className='section register'>
+          <div className="custom-shape-divider-top-1779565637">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
+              </svg>
+          </div>
           <Title level={2} style={{ marginBottom: 0 }} className='section-content'>Interested?</Title>
           <Text className='section-content'>Enter your email to get updates about the hackathon.</Text>
             <Form noValidate>
