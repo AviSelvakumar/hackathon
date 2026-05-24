@@ -40,12 +40,11 @@ export default function Home() {
         {/*Section 2 - Learn More*/}
         <div className="wave-container-learn-more"></div>
         <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh' }} id='learn-more' className='section learn-more'>
-        <Flex vertical gap={16} align="left" justify="top" style={{ height: '100vh' }} id='learn-more' className='section learn-more'>
-          <Flex gap={16} align="center" justify="center" className='prompt-container'>
-            <Title level={2} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>The Prompt</Title>
-            <div className='seperator'></div>
-            <Text className='prompt'>Invent entirely new ways of creating art that wouldn't exist without technology.</Text>
-          </Flex>
+            <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
+              <Title level={2} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>The Prompt</Title>
+              <Text className='prompt'>Invent entirely new ways of creating art that wouldn't exist without technology.</Text>
+            </Flex>
+  
           <Text className='prompt-desc'>Think beyond just drawing apps. What if you could create art that responds to sound, moves with the wind, or tells a story through interaction? Some ideas: </Text>
           <ul className='prompt-ideas'>
             <li>A canvas that gets painted by sound</li>
@@ -59,7 +58,6 @@ export default function Home() {
             <li>A visualization of your daily life turned into abstract art</li>
           </ul>
           <Text className='prompt-desc'>The possibilities are endless! We encourage you to think outside the box and create something truly unique.</Text>
-        </Flex>
         </Flex>
         {/*Section 3 - Register*/}
         <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='register' className='section register'>
