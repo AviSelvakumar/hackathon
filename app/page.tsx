@@ -26,20 +26,23 @@ export default function Home() {
       <div className="app-container" id = "app-container">
         {/*Section 1 - Landing*/}
         <Flex vertical gap={16} align="center" justify="center" className='section landing' id = 'landing'>
-          <Title level={1} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>Hack the Arts</Title>
-          <Text className='section-content'>A one-month online hackathon for high school students.</Text>
+          <img src="/hta-logo.png" alt="Hack the Arts Illustration" className='landing-illustration' />
+          <Title level={5} className='section-content' style={{fontWeight: 900, marginBottom: -24}}>Jul 1 - Aug 1</Title>
+          <Title level={5} className='section-content' style={{ marginBottom: 0, fontWeight: 900 }}>A one-month online creative hackathon for all high school students.</Title>
           <Flex gap={16}>
             <Button type="primary" href='#register'>Register</Button>
             <Button type="default" href='#learn-more'>Learn More</Button>
           </Flex>
+          {/*
           <div className='scroll-down-arrow' aria-hidden>
             <Text className='scroll-down-text'>Scroll for timeline, prizes, & more!</Text>
             <img src="/arrow-down.svg" alt="Scroll Down" />
           </div>
+          */}
         </Flex>
         {/*Section 2 - Learn More*/}
         <div className="wave-container-learn-more"></div>
-        <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh' }} id='learn-more' className='section learn-more'>
+        <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
               <Title level={2} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>The Prompt</Title>
               <Text className='prompt'>Invent entirely new ways of creating art that wouldn't exist without technology.</Text>
@@ -49,12 +52,9 @@ export default function Home() {
           <ul className='prompt-ideas'>
             <li>A canvas that gets painted by sound</li>
             <li>Art that evolves based on user emotions</li>
-            <li>A painting that changes depending on the time of day</li>
             <li>A digital mural that multiple people can paint simultaneously from different locations</li>
             <li>Art that reacts to your heartbeat or movement</li>
             <li>A drawing tool controlled entirely by gestures</li>
-            <li>A sculpture printed differently every time based on randomness</li>
-            <li>An artwork that decays or “ages” over time like real materials</li>
             <li>A visualization of your daily life turned into abstract art</li>
           </ul>
           <Text className='prompt-desc'>The possibilities are endless! We encourage you to think outside the box and create something truly unique.</Text>
@@ -85,9 +85,7 @@ export default function Home() {
         {/*Section 5 - Footer*/}
         <div className="wave-container"></div>
         <Flex vertical gap={16} align="right" justify="top" id='footer' className='footer'>
-          <Title level={1} className='footer-title' style={{ fontWeight: 900, color: '#2C2C2C', marginBottom: 0 }}>
-            Hack the Arts
-          </Title>
+          <img src="/hta-logo.png" alt="Hack the Arts Logo" className='footer-logo' />
           <Flex gap={16} align="right" justify="top">
             <a href="https://www.instagram.com/hackthearts/" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="social-icon" viewBox="0 0 16 16">
