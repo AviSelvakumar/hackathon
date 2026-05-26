@@ -27,10 +27,10 @@ export default function Home() {
         {/*Section 1 - Landing*/}
         <Flex vertical gap={16} align="center" justify="center" className='section landing' id = 'landing'>
           <img src="/hta-logo.png" alt="Hack the Arts Illustration" className='landing-illustration' />
-          <Title level={5} className='section-content' style={{fontWeight: 900, marginBottom: -24}}>Jul 1 - Aug 1</Title>
-          <Title level={5} className='section-content' style={{ marginBottom: 0, fontWeight: 900 }}>A one-month online creative hackathon for all high school students.</Title>
+          <Title level={5} className='section-content' style={{marginBottom: -24}}>Jul 1 - Aug 1</Title>
+          <Title level={5} className='section-content' style={{ marginBottom: 0}}>A one-month online creative hackathon for all high school students.</Title>
           <Flex gap={16}>
-            <Button type="primary" href='#register'>Register</Button>
+            <Button type="primary" href='https://hackthearts.devpost.com/'>Register</Button>
             <Button type="default" href='#learn-more'>Learn More</Button>
           </Flex>
           {/*
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="wave-container-learn-more"></div>
         <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
-              <Title level={2} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>The Prompt</Title>
+              <Title level={2} style={{ marginBottom: 0}} className='section-content'>The Prompt</Title>
               <Text className='prompt'>Invent entirely new ways of creating art that wouldn't exist without technology.</Text>
             </Flex>
           <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
@@ -67,7 +67,7 @@ export default function Home() {
                   <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
               </svg>
           </div>
-          <Title level={2} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>Interested?</Title>
+          <Title level={2} style={{ marginBottom: 0}} className='section-content'>Interested?</Title>
           <Text className='section-content'>Enter your email to get updates about the hackathon.</Text>
             <Form noValidate>
               <Flex gap={16}>
@@ -80,7 +80,7 @@ export default function Home() {
         </Flex>
         {/*Section 4 - Sponsors*/}
         <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='sponsors' className='section sponsors'>
-          <Title level={2} style={{ marginBottom: 0, fontWeight: 900 }} className='section-content'>Sponsors</Title>
+          <Title level={2} style={{ marginBottom: 0}} className='section-content'>Sponsors</Title>
           <Text className='section-content'>Interested in sponsoring Hack the Arts? Contact us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>!</Text>
         </Flex>
         {/*Section 5 - Footer*/}
