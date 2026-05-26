@@ -85,7 +85,7 @@ export default function Home() {
         </Flex>
         {/*Section 5 - Footer*/}
         <div className="wave-container"></div>
-        <Flex vertical gap={16} align="right" justify="top" id='footer' className='footer'>
+        <Flex vertical gap={16} align="left" justify="bottom" id='footer' className='footer'>
           <img src="/hta-logo.png" alt="Hack the Arts Logo" className='footer-logo' />
           <Flex gap={16} align="right" justify="top">
             <a href="https://www.instagram.com/hackthearts/" target="_blank" rel="noopener noreferrer">
@@ -104,10 +104,9 @@ export default function Home() {
               </svg>
             </a>
           </Flex>
-          <Flex vertical gap={0} align="right" justify="top">
+          <Flex vertical gap={0} align="left" justify="bottom">
             <Text className='footer-text' style={{ color: '#2C2C2C' }}>© 2026 Hack the Arts. All rights reserved.</Text>
-            <Text className='footer-text' style={{ color: '#2C2C2C', marginTop: '10px' }}>Hack the Arts is pending fiscal sponsorship by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
-</Text>
+            <Text className='footer-text' style={{ color: '#2C2C2C', marginTop: '10px' }}>Hack the Arts is pending fiscal sponsorship by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</Text>
           </Flex>
         </Flex>
       </div>
