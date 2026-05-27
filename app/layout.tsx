@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Climate_Crisis } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Script from 'next/script'
+
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 const climateCrisis = Climate_Crisis({ subsets: ['latin'], variable: '--font-climate-crisis' });
@@ -21,6 +23,8 @@ export const metadata: Metadata = {
   description: "Hack the Arts is a one-month online creative hackathon for high school students. Invent entirely new ways of creating art that wouldn't exist without technology.",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,6 +36,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable, climateCrisis.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
     </html>
   );
 }
