@@ -12,7 +12,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { Button, Flex, Typography, ConfigProvider, Input, Form} from 'antd';
+import { Button, Flex, Typography, ConfigProvider, Input, Form, Collapse} from 'antd';
 import useIllustrationTheme from './illustration_theme';
 const { Title, Text, Paragraph} = Typography;
 const CONTACT_EMAIL = 'sponsors@hackthearts.net';
@@ -30,8 +30,8 @@ export default function Home() {
           <Title level={5} className='section-content' style={{marginBottom: -24}}>Jul 1 - Aug 1</Title>
           <Title level={5} className='section-content' style={{ marginBottom: 0}}>A one-month online creative hackathon for all high school students.</Title>
           <Flex gap={16}>
-            <Button type="primary" href='https://hackthearts.devpost.com/'>Register</Button>
-            <Button type="default" href='#learn-more'>Learn More</Button>
+            <Button type="primary" href='https://hackthearts.devpost.com/' target='_blank'>Register</Button>
+            <Button type="default" href='https://discord.gg/feuHu7MrrX' target='_blank'>Join the Discord</Button>
           </Flex>
           {/*
           <div className='scroll-down-arrow' aria-hidden>
@@ -42,7 +42,7 @@ export default function Home() {
         </Flex>
         {/*Section 2 - About*/}
         <div className="wave-container-learn-more"></div>
-          <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
+          <Flex vertical gap={16} align="center" justify="top" style={{ height: 'auto'}} id='learn-more' className='section learn-more'>
               <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
                 <Title level={2} style={{ marginBottom: 0}} className='section-content'>About Hack the Arts</Title>
               </Flex>
@@ -65,8 +65,7 @@ export default function Home() {
                 </Flex>
               </Flex>
           </Flex>
-        </Flex>
-        {/*Section 2 - Learn More*/}
+        {/*Section 3 - The Prompt*/}
         {/*
         <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
@@ -87,7 +86,32 @@ export default function Home() {
         </Flex>
         </Flex>
         */}
-        {/*Section 3 - Register*/}
+        {/*Section 4 - FAQ*/}
+            <Flex vertical gap={16} align="center" justify="center" className='prompt-container faq'>
+              <Title level={2} style={{ marginBottom: 0}} className='section-content'>FAQ</Title>
+            </Flex>
+            <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
+              <Collapse accordion className='faq-collapse'>
+                <Collapse.Panel header="Who can participate?" key="1">
+                  <Text>Hack the Arts is open to all high school students, regardless of experience level. We welcome beginners and advanced creators alike!</Text>
+                </Collapse.Panel>
+                <Collapse.Panel header="What if I don't have any experience with coding or art?" key="2">
+                  <Text>No problem! Hack the Arts is designed to be beginner-friendly. We'll provide mentorship and resources to help you learn and grow.</Text>
+                </Collapse.Panel>
+                <Collapse.Panel header="How do I submit my project?" key="3">
+                  <Text>All projects must be submitted through our Devpost page. The submission form will be available on the Devpost page during the hackathon.</Text>
+                </Collapse.Panel>
+                <Collapse.Panel header="What are the prizes?" key="4">
+                  <Text>We have a variety of prizes for different categories. Check out our Devpost page for more details!</Text>
+                </Collapse.Panel>
+                <Collapse.Panel header="How can I get help during the hackathon?" key="5">
+                  <Text>We have a dedicated Discord server where you can ask questions, get feedback, and connect with mentors and other participants.</Text>
+                </Collapse.Panel>
+              </Collapse>
+            </Flex>
+                  </Flex>
+
+        {/*Section 4 - Email List*/}
         <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='register' className='section register'>
           <div className="custom-shape-divider-top-1779565637">
               <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

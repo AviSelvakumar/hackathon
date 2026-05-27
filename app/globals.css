@@ -89,8 +89,17 @@ h1.ant-typography, h2.ant-typography, h3.ant-typography, h4.ant-typography, h5.a
 
 .learn-more {
   background-color: #048A81;
-  padding-top: 50px;
+  padding-top: 100px;
   padding: 20px;
+  padding-bottom: 100px;
+}
+
+.faq {
+  margin-top: 100px;
+}
+
+.faq-collapse {
+  width: 100%;
 }
 
 .prompt {
@@ -160,7 +169,6 @@ h1.ant-typography, h2.ant-typography, h3.ant-typography, h4.ant-typography, h5.a
   text-align: left;
   justify-self: top;
   max-width: 800px;
-  
 }
 
 .custom-shape-divider-top-1779565637 {
