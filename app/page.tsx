@@ -14,7 +14,7 @@
 import { useEffect, useState } from 'react';
 import { Button, Flex, Typography, ConfigProvider, Input, Form} from 'antd';
 import useIllustrationTheme from './illustration_theme';
-const { Title, Text} = Typography;
+const { Title, Text, Paragraph} = Typography;
 const CONTACT_EMAIL = 'sponsors@hackthearts.net';
 
 export default function Home() {
@@ -40,8 +40,34 @@ export default function Home() {
           </div>
           */}
         </Flex>
-        {/*Section 2 - Learn More*/}
+        {/*Section 2 - About*/}
         <div className="wave-container-learn-more"></div>
+          <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
+              <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
+                <Title level={2} style={{ marginBottom: 0}} className='section-content'>About Hack the Arts</Title>
+              </Flex>
+            <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
+              <Paragraph className='prompt-desc'>
+                Hack the Arts is a month-long creative hackathon where high school students from accross the globe will come together to create innovtive new ways to interact with or create art. We'll provide mentorship, resources, and a strong community to help you bring your ideas to life, regardless of your experience level. You'll provide the creativity and ennergy required to make something truly unique, and we'll provide the support to help you make it happen. We can't wait to see what you create!
+              </Paragraph>
+              <Flex vertical gap={16} className='info-container'>
+                <Flex gap={16} align="center" justify="top" className='info-item'>
+                  <Title level={4} style={{ marginBottom: 0}} className='section-content'>Beginner Friendly</Title>
+                  <Text className='prompt-desc'>No prior experience is required! We'll provide mentorship and resources to help you learn and grow.</Text>
+                </Flex>
+                <Flex gap={16} align="center" justify="top" className='info-item'>
+                  <Title level={4} style={{ marginBottom: 0}} className='section-content'>Inclusive Environment</Title>
+                  <Text className='prompt-desc'>We welcome students from all experience levels, from beginners to advanced creators.</Text>
+                </Flex>
+                <Flex gap={16} align="center" justify="top" className='info-item'>
+                  <Title level={4} style={{ marginBottom: 0}} className='section-content'>Global Community</Title>
+                  <Text className='prompt-desc'>Connect with other high school students from around the world who share your passion for creativity and technology.</Text>
+                </Flex>
+              </Flex>
+          </Flex>
+        </Flex>
+        {/*Section 2 - Learn More*/}
+        {/*
         <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
               <Title level={2} style={{ marginBottom: 0}} className='section-content'>The Prompt</Title>
@@ -60,6 +86,7 @@ export default function Home() {
           <Text className='prompt-desc'>The possibilities are endless! We encourage you to think outside the box and create something truly unique.</Text>
         </Flex>
         </Flex>
+        */}
         {/*Section 3 - Register*/}
         <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='register' className='section register'>
           <div className="custom-shape-divider-top-1779565637">
