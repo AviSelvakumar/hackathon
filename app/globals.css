@@ -276,3 +276,9 @@ ul {
     height: 14px
   }  
 }
+
+.sponsor-logo {
+  max-width: 200px;
+  height: auto;
+  margin: 0 20px;
+}
