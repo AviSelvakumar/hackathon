@@ -112,7 +112,7 @@ export default function Home() {
                   </Flex>
 
         {/*Section 4 - Email List*/}
-        <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='register' className='section register'>
+        <Flex vertical gap={16} align="center" justify="center" style={{ minHeight: '100vh' }} id='register' className='section register'>
           <div className="custom-shape-divider-top-1779565637">
               <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                   <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
@@ -120,17 +120,17 @@ export default function Home() {
           </div>
           <Title level={2} style={{ marginBottom: 0}} className='section-content'>Interested?</Title>
           <Text className='section-content'>Enter your email to get updates about the hackathon.</Text>
-            <Form noValidate>
-              <Flex gap={16}>
-                <Form.Item name="email" rules={[{ required: true, message: 'Please input your email!' }, { type: 'email', message: 'Please enter a valid email!' }]}>
-                  <Input placeholder="Enter your email" style={{ width: 300 }} type="email"/>
+            <Form noValidate style={{ width: '100%', maxWidth: 400, padding: '0 16px' }}>
+              <Flex gap={16} className="email-form-row">
+                <Form.Item name="email" rules={[{ required: true, message: 'Please input your email!' }, { type: 'email', message: 'Please enter a valid email!' }]} style={{ flex: 1, marginBottom: 0 }}>
+                  <Input placeholder="Enter your email" className="email-input" style={{ width: '100%' }} type="email"/>
                 </Form.Item>
-                <Button type="primary">Submit</Button>
+                <Button type="primary" htmlType="submit">Submit</Button>
               </Flex>
             </Form>
         </Flex>
         {/*Section 4 - Sponsors*/}
-        <Flex vertical gap={16} align="center" justify="center" style={{ height: '100vh' }} id='sponsors' className='section sponsors'>
+        <Flex vertical gap={16} align="center" justify="center" style={{ minHeight: '100vh' }} id='sponsors' className='section sponsors'>
           <Title level={2} style={{ marginBottom: 0}} className='section-content'>Sponsors</Title>
           <Flex gap={16} align="center" justify="center" className='sponsor-logos'>
             <img src="/wolfram.png" alt="Wolfram Logo" className='sponsor-logo' />

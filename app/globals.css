@@ -69,6 +69,7 @@ h1.ant-typography, h2.ant-typography, h3.ant-typography, h4.ant-typography, h5.a
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch;
 }
 
 .footer {
@@ -78,7 +79,7 @@ h1.ant-typography, h2.ant-typography, h3.ant-typography, h4.ant-typography, h5.a
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
 }
 
@@ -289,4 +290,70 @@ ul {
   max-width: 200px;
   height: auto;
   margin: 0 20px;
+}
+
+@media (max-width: 640px) {
+  .landing-illustration {
+    height: 32vh;
+  }
+
+  .prompt-container {
+    width: 92%;
+    padding: 16px 18px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .info-item .section-content {
+    text-align: left;
+  }
+
+  .prompt-desc {
+    font-size: 16px;
+  }
+
+  .prompt-ideas {
+    font-size: 16px;
+  }
+
+  .email-form-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .email-form-row .ant-form-item {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .email-form-row .email-input {
+    width: 100% !important;
+  }
+
+  .email-form-row .ant-btn {
+    width: 100%;
+  }
+
+  .footer {
+    height: auto;
+    padding: 24px 20px 32px;
+  }
+
+  .footer-logo {
+    max-width: 200px;
+    margin-left: 0;
+  }
+
+  .sponsor-logo {
+    max-width: 140px;
+  }
+
+  .faq-collapse {
+    width: 100%;
+  }
 }
