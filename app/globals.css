@@ -80,7 +80,6 @@ h1.ant-typography, h2.ant-typography, h3.ant-typography, h4.ant-typography, h5.a
 
 .section {
   min-height: 100vh;
-  scroll-snap-align: start;
 }
 
 .section-content {
@@ -90,13 +89,15 @@ h1.ant-typography, h2.ant-typography, h3.ant-typography, h4.ant-typography, h5.a
 
 .learn-more {
   background-color: #048A81;
-  padding-top: 100px;
-  padding: 20px;
-  padding-bottom: 100px;
+  padding: 40px 20px;
+}
+
+.section.learn-more {
+  min-height: auto;
 }
 
 .faq {
-  margin-top: 100px;
+  margin-top: 24px;
 }
 
 .faq-collapse {

@@ -66,14 +66,12 @@ export default function Home() {
               </Flex>
           </Flex>
         {/*Section 3 - The Prompt*/}
-        {/*
-        <Flex vertical gap={16} align="center" justify="top" style={{ height: '100vh'}} id='learn-more' className='section learn-more'>
+        <Flex vertical gap={16} align="center" justify="top" style={{ height: 'auto', width: '100%'}} id='prompt' className='section learn-more'>
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
-              <Title level={2} style={{ marginBottom: 0}} className='section-content'>The Prompt</Title>
-              <Text className='prompt'>Invent entirely new ways of creating art that wouldn't exist without technology.</Text>
+              <Title level={2} style={{ marginBottom: 0}} className='section-content'>The Task</Title>
             </Flex>
           <Flex vertical gap={16} align="center" justify="center" className='prompt-container'>
-          <Text className='prompt-desc'>Think beyond just drawing apps. What if you could create art that responds to sound, moves with the wind, or tells a story through interaction? Some ideas: </Text>
+          <Text className='prompt-desc'>This year's task is <b>create art that wouldn't exist without technology</b>. Think beyond just drawing apps. What if you could create art that responds to sound, moves with the wind, or tells a story through interaction? Some ideas: </Text>
           <ul className='prompt-ideas'>
             <li>A canvas that gets painted by sound</li>
             <li>Art that evolves based on user emotions</li>
@@ -85,7 +83,6 @@ export default function Home() {
           <Text className='prompt-desc'>The possibilities are endless! We encourage you to think outside the box and create something truly unique.</Text>
         </Flex>
         </Flex>
-        */}
         {/*Section 4 - FAQ*/}
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container faq'>
               <Title level={2} style={{ marginBottom: 0}} className='section-content'>FAQ</Title>
