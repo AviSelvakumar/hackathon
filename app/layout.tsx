@@ -39,8 +39,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
-      </body>
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
+      </body>
     </html>
   );
 }
