@@ -1,3 +1,7 @@
+
+
+"use client";
+
 import { useMemo } from 'react';
 import { theme } from 'antd';
 import type { ConfigProviderProps } from 'antd';

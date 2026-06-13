@@ -29,6 +29,7 @@ export default function Home() {
           <img src="/hta-logo.png" alt="Hack the Arts Illustration" className='landing-illustration' />
           <Title level={5} className='section-content' style={{marginBottom: -24}}>Jul 1 - Aug 1</Title>
           <Title level={5} className='section-content' style={{ marginBottom: 0}}>A one-month online creative hackathon for all high school students.</Title>
+          <Title level={3} className='section-content prize' style={{ marginBottom: 0, color: '#ff4a4a'}}>Win up to $1000</Title>
           <Flex gap={16}>
             <Button type="primary" href='https://hackthearts.devpost.com/' target='_blank'>Register</Button>
             <Button type="default" href='https://discord.gg/feuHu7MrrX' target='_blank'>Join the Discord</Button>
@@ -99,7 +100,7 @@ export default function Home() {
                   <Text>All projects must be submitted through our Devpost page. The submission form will be available on the Devpost page during the hackathon.</Text>
                 </Collapse.Panel>
                 <Collapse.Panel header="What are the prizes?" key="4">
-                  <Text>We have a variety of prizes for different categories. Check out our Devpost page for more details!</Text>
+                  <Text>We’re giving away $1000 in prizes across different categories. Check out our Devpost page for more details!</Text>
                 </Collapse.Panel>
                 <Collapse.Panel header="How can I get help during the hackathon?" key="5">
                   <Text>We have a dedicated Discord server where you can ask questions, get feedback, and connect with mentors and other participants.</Text>
