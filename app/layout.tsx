@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Climate_Crisis } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Script from 'next/script'
+import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -37,6 +38,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Analytics />
       </body>
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
     </html>
