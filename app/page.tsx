@@ -132,6 +132,7 @@ export default function Home() {
           <Title level={2} style={{ marginBottom: 0}} className='section-content'>Sponsors</Title>
           <Flex gap={16} align="center" justify="center" className='sponsor-logos'>
             <img src="/wolfram.png" alt="Wolfram Logo" className='sponsor-logo' />
+            <img src="/xyz-logo-color.svg" alt="gen.xyz Logo" className='sponsor-logo' />
           </Flex>
           <Text className='section-content'>Interested in sponsoring Hack the Arts? Contact us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>!</Text>
         </Flex>
