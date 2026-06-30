@@ -1,8 +1,13 @@
 Official repository for the code that powers the Hack the Arts website.
-ly 1st
 ## Getting Started
+### Prerequisites
+You should have npm installed.
 
-First, run the development server:
+First, install dependencies:
+```bash
+npm install
+```
+To test any changes you make, run the development server:
 
 ```bash
 npm run dev
