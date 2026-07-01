@@ -82,8 +82,9 @@ export default function Home() {
             <li>A visualization of your daily life turned into abstract art</li>
           </ul>
           <Text className='prompt-desc'>The possibilities are endless! We encourage you to think outside the box and create something truly unique.</Text>
+                <Button type="primary" href="/task" style={{ marginTop: 16 }}>Learn More</Button>
+
         </Flex>
-        <Button type="primary" href="/task" style={{ marginTop: 16 }}>Learn More</Button>
         </Flex>
         {/*Section 4 - FAQ*/}
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container faq'>
