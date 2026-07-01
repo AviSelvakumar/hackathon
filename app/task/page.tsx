@@ -107,6 +107,10 @@ export default function TaskPage() {
                 </Paragraph>
               </div>
             ))}
+            <Title level={4} style={{ marginTop: 16, color: '#fffddd', textAlign: 'center' }}>
+              Ready to start building? Check out the resources page for helpful links and inspiration.
+            </Title>
+            <Button type="primary" href="/resources" style={{ marginTop: 16 }}>View Resources</Button>
           </Flex>
         </div>
       </div>

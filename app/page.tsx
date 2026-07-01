@@ -83,6 +83,7 @@ export default function Home() {
           </ul>
           <Text className='prompt-desc'>The possibilities are endless! We encourage you to think outside the box and create something truly unique.</Text>
         </Flex>
+        <Button type="primary" href="/task" style={{ marginTop: 16 }}>Learn More</Button>
         </Flex>
         {/*Section 4 - FAQ*/}
             <Flex vertical gap={16} align="center" justify="center" className='prompt-container faq'>
@@ -159,7 +160,7 @@ export default function Home() {
           </Flex>
           <Flex vertical gap={0} align="left" justify="bottom">
             <Text className='footer-text' style={{ color: '#2C2C2C' }}>© 2026 Hack the Arts. All rights reserved.</Text>
-            <Text className='footer-text' style={{ color: '#2C2C2C', marginTop: '10px' }}>Hack the Arts is pending fiscal sponsorship by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</Text>
+            <Text className='footer-text' style={{ color: '#2C2C2C', marginTop: '10px' }}>Hack the Arts is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</Text>
           </Flex>
         </Flex>
       </div>
